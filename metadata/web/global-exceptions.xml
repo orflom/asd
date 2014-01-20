@@ -1,0 +1,5 @@
+    <global-exceptions>
+        <exception type="java.lang.Exception"
+            key="errors.general"
+            handler="com.foundstone.s3i.webapp.action.ActionExceptionHandler"/>
+    </global-exceptions>

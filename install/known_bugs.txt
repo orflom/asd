@@ -1,0 +1,23 @@
+Foundstone Professional Services, A Division of McAfee
+Hacme Books 2.0
+
+KNOWN BUGS
+May 30, 2006
+
+The following bugs are known to the developers and were not fixed in time for the release date:
+
+84. Checkout screen validation error causes only validation error messages to be shown.
+
+86. Bank accounts #'s in checkout are not correctly validated against Hacme Bank.
+
+88. loginMenu.jsp does not properly handle cached XML data for class schedules.
+
+95. Installer: Shortcuts are not offered for the desktop or quick launch bar, only the Start menu.
+
+96. Forgot password page displays error message on initial access.
+
+106. If you already have a CATALINA_HOME environment variable defined the server will not start.
+
+109. Tomcat startup script makes errors with JAVA_HOME, CATALINA_HOME, and "port already bound" difficult to troubleshoot.
+
+116. If Hacme Bank is also deployed locally on IIS but MSDE database is not running, checkout process in Hacme Books will not fail gracefully.

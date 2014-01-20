@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!--<bean id="lookupManager" class="com.foundstone.s3i.service.impl.LookupManagerImpl">
+        <property name="lookupDAO"><ref bean="lookupDAO"/></property>
+    </bean>-->
+	
+	<!-- Transaction template for Managers, from:
+		 http://blog.exis.com/colin/archives/2004/07/31/concise-transaction-definitions-spring-11/ -->
+    <bean id="txProxyTemplate" abstract="true"
+        class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="save*">PROPAGATION_REQUIRED</prop>
+                <prop key="remove*">PROPAGATION_REQUIRED</prop>
+                <prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Generic manager that can be used to do basic CRUD operations on any objects -->
+    <!--<bean id="manager" parent="txProxyTemplate">
+        <property name="target">
+            <bean class="com.foundstone.s3i.service.impl.BaseManager">
+                <property name="DAO"><ref bean="dao"/></property>
+            </bean>
+        </property>
+    </bean>-->
+    
+    <!-- Transaction declarations for business services.  To apply a generic transaction proxy to
+         all managers, you might look into using the BeanNameAutoProxyCreator -->
+    <bean id="userManager" parent="txProxyTemplate">
+        <property name="target">
+            <bean class="com.foundstone.s3i.service.impl.UserManagerImpl">
+                <property name="userDAO"><ref bean="userDAO"/></property>
+            </bean>
+        </property>
+		<!-- Override default transaction attributes b/c of LoginCookie methods -->
+        <property name="transactionAttributes">
+            <props>
+                <prop key="save*">PROPAGATION_REQUIRED</prop>
+                <prop key="remove*">PROPAGATION_REQUIRED</prop>
+<!--            <prop key="*LoginCookie">PROPAGATION_REQUIRED</prop>-->
+                <prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+            </props>
+        </property>
+    </bean>
+    <!-- Transaction declarations for business services.  To apply a generic transaction proxy to
+         all managers, you might look into using the BeanNameAutoProxyCreator -->
+    <bean id="productsManager" parent="txProxyTemplate">
+        <property name="target">
+            <bean class="com.foundstone.s3i.service.impl.ProductsManagerImpl">
+                <property name="productDAO"><ref bean="productDAO"/></property>
+            </bean>
+        </property>
+		<!-- Override default transaction attributes b/c of LoginCookie methods -->
+        <property name="transactionAttributes">
+            <props>
+                <prop key="save*">PROPAGATION_REQUIRED</prop>
+                <prop key="remove*">PROPAGATION_REQUIRED</prop>
+<!--            <prop key="*LoginCookie">PROPAGATION_REQUIRED</prop>-->
+                <prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <!-- Transaction declarations for business services.  To apply a generic transaction proxy to
+         all managers, you might look into using the BeanNameAutoProxyCreator -->
+    <bean id="customerOrderManager" parent="txProxyTemplate">
+        <property name="target">
+            <bean class="com.foundstone.s3i.service.impl.CustomerOrderManagerImpl">
+                <property name="customerOrderDAO"><ref bean="customerOrderDAO"/></property>
+            </bean>
+        </property>
+		<!-- Override default transaction attributes b/c of LoginCookie methods -->
+        <property name="transactionAttributes">
+            <props>
+                <prop key="save*">PROPAGATION_REQUIRED</prop>
+                <prop key="remove*">PROPAGATION_REQUIRED</prop>
+<!--            <prop key="*LoginCookie">PROPAGATION_REQUIRED</prop>-->
+                <prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+            </props>
+        </property>
+    </bean>
+    <bean name="paymentManager" class="com.foundstone.s3i.service.impl.PaymentManagerWS">
+        <property name="accountURL"><value>http://localhost/HacmeBank_v2_WS/WebServices/AccountManagement.asmx</value></property>
+        <property name="userURL"><value>http://localhost/HacmeBank_v2_WS/WebServices/UserManagement.asmx</value></property>
+        <property name="hacmeBankLogin"><value>hacmebooks</value></property>
+        <property name="hacmeBankPassword"><value>password</value></property>
+        <property name="hacmeBankAccountNumber"><value>112233445566</value></property>
+    </bean>
+</beans>

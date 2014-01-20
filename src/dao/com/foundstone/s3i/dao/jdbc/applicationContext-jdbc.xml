@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- Transaction manager for a single JDBC DataSource -->
+    <bean id="transactionManager" 
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+
+    <!-- UserDAO: JDBC implementation -->
+    <bean id="userDAO" class="com.foundstone.s3i.dao.jdbc.UserDAOJdbc">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+    </bean>
+    
+    <!-- ProductDAO: JDBC implementation -->
+    <bean id="productDAO" class="com.foundstone.s3i.dao.jdbc.ProductDAOJdbc">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+  
+    </bean>
+    <!-- CustomerOrderDAO: JDBC implementation -->
+    <bean id="customerOrderDAO" class="com.foundstone.s3i.dao.jdbc.CustomerOrderDAOJdbc">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+  
+    </bean>
+    
+    <!-- Add new DAOs here -->
+</beans>

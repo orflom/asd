@@ -1,0 +1,152 @@
+
+@import url(messages.css);
+@import url(displaytag.css);
+
+BODY {
+    scrollbar-arrow-color:#B01212;
+	scrollbar-base-color:#B4B4B4;
+	scrollbar-shadow-color:#F3F3F3;
+	scrollbar-face-color:#B4B4B4;
+	scrollbar-highlight-color:#F3F3F3;
+	scrollbar-dark-shadow-color:#FFFFFF;
+	scrollbar-3d-light-color:#B4B4B4;
+}
+
+TD {
+	font-family : Verdana,  Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #373737;
+	font-weight : normal;	
+}
+TD A:LINK {color : #373737; text-decoration : underline;}
+TD A:VISITED {color : #373737; text-decoration : underline;}
+TD A:ACTIVE {color : #373737; text-decoration : underline;}
+TD A:HOVER {color : #BA0303; text-decoration : underline;}
+
+B {
+	font-family : Verdana,  Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #373737;
+	font-weight : bold;	
+}
+B A:LINK {color : #373737; text-decoration : underline;}
+B A:VISITED {color : #373737; text-decoration : underline;}
+B A:ACTIVE {color : #373737; text-decoration : underline;}
+B A:HOVER {color : #BA0303; text-decoration : underline;}
+
+.Utxt1 {
+	font-family : Verdana,  Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #BEBEBE;
+	font-weight : normal;
+}
+
+.Utxt1Bold {
+	font-family : Verdana,  Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : #BEBEBE;
+	font-weight : bold;
+}
+
+.errorMessage
+{
+	font-size: 9pt;
+	color: #BA3030;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.message
+{
+	font-family : Verdana,  Arial, Helvetica, sans-serif;
+	font-size : 10px;
+	color : black;
+	font-weight : bold;
+}
+.txtLoginBox{
+    border-top: 1px solid #505050;
+    border-bottom: 1px solid #505050;
+    border-left: 1px solid #505050;
+    border-right: 1px solid #505050;
+    background-color: #F5F5F5;
+    width= 60px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;    
+    color: #505050;   
+    text-decoration: none;
+	background-image: url(./images/shadow_txtbox.gif);	
+}
+.loginbutton{
+    border-top: 1px solid #505050;
+    border-bottom: 1px solid #505050;
+    border-left: 1px solid #505050;
+    border-right: 1px solid #505050;
+    background-color: #990000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;    
+    color: #FFFFFF;
+	font-weight : bold;	   
+    text-decoration: none;
+    cursor : hand;
+}
+.shortlistbox
+{
+	color : #604F3E;
+	font-weight : bold;
+}
+.loginbox
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;  
+    font-weight : bold;
+}
+.hacmeheader
+{
+    	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #BDD9EC;
+	font-weight : bold;
+    	text-decoration: none;	
+}
+.hacmeheader A:LINK {color : #FBF7E8; text-decoration : none;}
+.hacmeheader A:VISITED {color : #FBF7E8; text-decoration : none;}
+.hacmeheader A:ACTIVE {color : #FFFFFF; text-decoration : none;}
+.hacmeheader A:HOVER {color : #FFFFFF; text-decoration : none;}
+
+
+.menu_dark
+{
+    	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color : #FBF7E8;
+	font-weight : bold;
+    	text-decoration: none;
+    	background-color: #4D3A26;
+}
+.menu_dark A:LINK {color : #FBF7E8; text-decoration : none;}
+.menu_dark A:VISITED {color : #FBF7E8; text-decoration : none;}
+.menu_dark A:ACTIVE {color : #FFFFFF; text-decoration : none;}
+.menu_dark A:HOVER {color : #FFFFFF; text-decoration : none;}
+
+.menu_light
+{
+    	background-color: #A99D7SC;
+}
+
+.left_nav_table
+{
+	background-color: #896D4C;
+}
+.booktitle {
+	font-size: 18px;
+	font-weight: bold;
+	border: 1px #E8E8E8 solid;
+	padding: 5px 5px 5px 5px;
+}
+
+.bookdetails {
+	font-size: 14px;
+	padding: 5px 5px 5px 5px;
+}
+
+.checkoutForm {
+	font-weight: bold;
+	text-align: right;
+}
