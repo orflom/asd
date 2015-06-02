@@ -1,0 +1,93 @@
+<?xml version="1.0"?> 
+<adv>
+ <advertise>
+    <courseschedule>
+     <date>03/01/05</date>
+     <location>New York, NY</location>
+     <title>Writing Secure Code - ASP.NET (C#)</title>
+     <shortdescription> </shortdescription>
+     <moreinfo> </moreinfo>
+   </courseschedule>
+    <whitepaper>
+           <date>01/01/04</date>
+           <title>Foundstone Hacme Bank - User and Solution Guide</title>
+           <downloadlocation>www.foundstone.com</downloadlocation>
+   </whitepaper>
+   <tool>
+           <title>Hacme Bank</title>
+           <description> Application security training tool</description>
+           <downloadlocation>www.foundstone.net</downloadlocation>
+   </tool>
+       <othernews>
+        <newitem>McAfee, Inc. Completes Acquisition of Foundstone, Inc.</newitem>
+   </othernews>
+ </advertise>
+ <advertise>
+    <courseschedule>
+     <date>03/09/05</date>
+     <location>Dallas, TX</location>
+     <title>Ultimate Web Hacking</title>
+     <shortdescription> </shortdescription>
+     <moreinfo> </moreinfo>
+   </courseschedule>
+    <whitepaper>
+           <date>01/01/04</date>
+           <title>Foundstone SSLDigger - The Need for Strong SSL Ciphers</title>
+           <downloadlocation>www.foundstone.com</downloadlocation>
+   </whitepaper>
+   <tool>
+           <title>SSLDigger</title>
+           <description> A tool to assess the strength of SSL servers</description>
+           <downloadlocation>www.foundstone.net</downloadlocation>
+   </tool>
+    <othernews>
+        <newitem>Foundstone Releases Free One-of-a-Kind Software Security Training Application</newitem>
+   </othernews>
+  </advertise>
+ <advertise>
+    <courseschedule>
+     <date>03/15/05</date>
+     <location>Washington, DC</location>
+     <title>Writing Secure Code - Java (J2EE)</title>
+     <shortdescription> </shortdescription>
+     <moreinfo> </moreinfo>
+   </courseschedule>
+    <whitepaper>
+        <date>01/01/04</date>
+        <title>Foundstone SiteDigger - Identifying Information Leakage Using Search Engines</title>
+        <downloadlocation>www.foundstone.com</downloadlocation>
+   </whitepaper>
+   <tool>
+        <title>SiteDigger</title>
+        <description>Searches Google's cache to look for vulnerabilities</description>
+        <downloadlocation>www.foundstone.com</downloadlocation>
+   </tool>
+    <othernews>
+        <newitem>Foundstone Acquires Fuzion software</newitem>
+   </othernews>
+ </advertise>
+ <advertise>
+    <courseschedule>
+     <date>03/22/05</date>
+     <location>Boston, MA</location>
+     <title>Writing Secure Code - ASP.NET (C#)</title>
+     <shortdescription> </shortdescription>
+     <moreinfo> </moreinfo>
+   </courseschedule>
+     <othernews>
+        <newitem>McAfee, Inc. to Acquire Foundstone, Inc. for $86 Million in Cash</newitem>
+   </othernews>
+ </advertise>
+ <advertise>
+    <courseschedule>
+     <date>03/29/05</date>
+     <location>San Jose, CA</location>
+     <title>Writing Secure Code - ASP.NET (C#)</title>
+     <shortdescription> </shortdescription>
+     <moreinfo> </moreinfo>
+   </courseschedule>
+     <othernews>
+        <newitem>Department of Justice Selects Foundstone to Combat Computer Vulnerabilities</newitem>
+   </othernews>
+ </advertise>
+</adv>
